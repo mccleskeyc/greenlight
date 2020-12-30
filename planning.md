@@ -30,3 +30,9 @@ Script
 - Date Read
 - Recommendation
 - Notes
+- belongs to a user
+
+## User
+- username/email
+- password_digest
+- has many scripts
