@@ -36,3 +36,6 @@ Script
 - username/email
 - password_digest
 - has many scripts
+
+## Sessions (cookies)
+- 
