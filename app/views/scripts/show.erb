@@ -1,0 +1,27 @@
+<div class="container">
+<h1> <%= @scripts.title %> </h1>
+    <b> Writer(s): </b>
+        <br>
+    <%= @scripts.writer %>
+    <br><br>
+
+    <b> Date Read: </b>
+        <br>
+    <%= @scripts.date %>
+    <br><br>
+
+    <b> Recommendation: </b>
+        <br>
+    <%= @scripts.rec %>
+    <br><br>
+
+    <b> Notes: </b>
+    <%= @scripts.notes %>
+    <br><br>
+
+<form action="/scripts/<%= @scripts.id %>" method="post">
+  <a href="/scripts/<%= @scripts.id %>/edit" class="btn-small teal">Edit Coverage</a>  
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Coverage" class="btn-small teal">
+</form>
+</div>

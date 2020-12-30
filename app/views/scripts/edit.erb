@@ -1,0 +1,36 @@
+<h1 class="teal-text"> Edit <%= @scripts.title %> </h1>
+<form action="/scripts/<%= @scripts.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <div class="input-field">
+    <input id="title" name="scripts[title]" type="text" class="validate" autocomplete="off" value="<%= @scripts.title %>">
+    <label for="title">Title</label>
+  </div>
+
+  <div class="input-field">
+    <input id="writer" name="scripts[writer]" type="text" class="validate" autocomplete="off" value="<%= @scripts.writer %>">
+    <label for="writer">Writer(s)</label>
+  </div>
+
+  <div class="input-field">
+    <input type="text" class="datepicker" name="scripts[date]" id="date" autocomplete="off" value="<%= @scripts.date %>">
+    <label for="date">Date Read</label>
+  </div>
+
+  <div class="input-field">
+    <input id="rec" name="scripts[rec]" type="text" class="validate" autocomplete="off" value="<%= @scripts.rec %>">
+    <label for="rec">Recommendation</label>
+  </div>
+
+  <div class="input-field">
+    <textarea id="notes" rows = "5" cols = "60" name = "scripts[notes]"> <%= @scripts.notes %></textarea>
+    <label for="notes">Notes</label>
+  </div>
+
+  <input type="submit" value="Save Coverage" class="btn teal">
+</form>
+
+<script>
+$(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+</script>
