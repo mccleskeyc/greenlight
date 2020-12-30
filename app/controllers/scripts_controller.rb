@@ -1,8 +1,9 @@
 class ScriptsController < ApplicationController
-    get '/scripts' do
-      @scripts = Script.all
-      erb :'scripts/index'
-    end
+  get '/scripts' do
+    @scripts = Script.all
+    @script = Script.find_by_id(session[:script_id])
+    erb :'scripts/index'
+  end
     
     get '/scripts/new' do
       erb :'scripts/new'
@@ -10,6 +11,7 @@ class ScriptsController < ApplicationController
     
     get '/scripts/:id' do
       find_script
+    session[:script_id] = @script.id if @script
       erb :'scripts/show'
     end
 
