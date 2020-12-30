@@ -39,7 +39,9 @@ class ScriptsController < ApplicationController
   end
 
   delete '/scripts/:id' do
-    "hello world"
+    find_script
+    @scripts.destroy if @scripts
+    redirect "/scripts"
   end
 
   def find_script
