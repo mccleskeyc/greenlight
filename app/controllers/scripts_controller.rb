@@ -11,7 +11,8 @@ class ScriptsController < ApplicationController
     
     get '/scripts/:id' do
       find_script
-    session[:script_id] = @script.id if @script
+      session[:script_id] = @script.id if @script
+      redirect_if_not_found
       erb :'scripts/show'
     end
 
@@ -50,6 +51,10 @@ class ScriptsController < ApplicationController
 
   def find_script
     @scripts = Script.find_by_id(params[:id])
+  end
+
+  def redirect_if_not_found
+    redirect "/scripts" unless @scripts
   end
 
 
