@@ -29,6 +29,12 @@ class ScriptsController < ApplicationController
       end
     end
 
+    delete '/scripts/:id' do
+      find_script
+      @scripts.destroy if @scripts
+      redirect "/scripts"
+    end
+
     patch "/scripts/:id" do
       find_script
 
@@ -40,9 +46,7 @@ class ScriptsController < ApplicationController
     end
   end
 
-  delete '/scripts/:id' do
-    "hello world"
-  end
+  
 
   def find_script
     @scripts = Script.find_by_id(params[:id])
