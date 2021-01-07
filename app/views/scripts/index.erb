@@ -1,6 +1,6 @@
 
 <div class="container">
-    <h1 class="teal-text" style= "text-align: center;"> Completed Coverage </h1>
+    <h1    style= "text-align: center;"> Completed Coverage </h1>
     <p>Recently Viewed: <%= @script ? @script.title : "Haven't viewed any scripts." %></p>
         <table class="responsive-table">
             <tr>
@@ -13,7 +13,7 @@
 
             <tr>
             <% @scripts.each do |script| %>
-                <td><a href="/scripts/<%= script.id %>"> <%= script.title %></a> </td>
+                <td><a href="/scripts/<%= script.id %>"   > <%= script.title %></a> </td>
                 <td> <%= script.writer %> </td>
                 <td> <%= script.date %> </td>
                 <td> <%= script.rec %> </td>
