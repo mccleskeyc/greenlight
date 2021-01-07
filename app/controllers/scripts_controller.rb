@@ -1,15 +1,18 @@
 class ScriptsController < ApplicationController
-  get '/scripts' do
-    @scripts = Script.all
-    @script = Script.find_by_id(session[:script_id])
-    erb :'scripts/index'
-  end
+    get '/scripts' do
+      redirect_if_not_signed_in
+      @scripts = Script.all
+      @script = Script.find_by_id(session[:script_id])
+      erb :'scripts/index'
+    end
     
     get '/scripts/new' do
+      redirect_if_not_signed_in
       erb :'scripts/new'
     end
     
     get '/scripts/:id' do
+      redirect_if_not_signed_in
       find_script
       session[:script_id] = @script.id if @script
       redirect_if_not_found
@@ -17,6 +20,7 @@ class ScriptsController < ApplicationController
     end
 
     get '/scripts/:id/edit' do
+      redirect_if_not_signed_in
       find_script
       erb :'scripts/edit'
     end
