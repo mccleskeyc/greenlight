@@ -1,14 +1,14 @@
-## About Script Tracker
-Welcome to script tracker! This application was built using Sinatra and ActiveRecord to help tv and film development teams, contest administrators and judges, and freelance script analysts like myself organize their coverage. Currently, Script Tracker can track the following for any entry:
+## About Green Lightt
+Welcome to Green Lightt! This application was built using Sinatra and ActiveRecord to help tv and film development teams, contest administrators and judges, and freelance script analysts like myself organize their coverage. Currently,Green Lightht can track the following for any entry:
 - Title
 - Date Read
 - Recommendation
 - Notes
 
-## Running Script Tracker
-To use Script Tracker, do the following:
+## Running Green Lightt
+To use Green Lightt, do the following:
 - Clone this repository
-- `cd` into the directory (`script-coverage-app`)
+- `cd` into the directory (`greenlight`)
 - Run `bundle install`
 - Run `shotgun`
 - Enter the local url provided by `shotgun` (likely `localhost:9393`) into your browser
@@ -16,7 +16,7 @@ To use Script Tracker, do the following:
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/mccleskeyc/script-coverage-app
+Bug reports and pull requests are welcome on GitHub at https://github.com/mccleskeyc/greenlight
 
 ## License
 This gem is available under the terms of the MIT License at https://opensource.org/licenses/MIT.
