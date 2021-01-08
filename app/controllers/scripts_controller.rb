@@ -1,7 +1,7 @@
 class ScriptsController < ApplicationController
     get '/scripts' do
       redirect_if_not_signed_in
-      @scripts = Script.all
+      @scripts = current_user.scripts
       @script = Script.find_by_id(session[:script_id])
       erb :'scripts/index'
     end
@@ -26,7 +26,8 @@ class ScriptsController < ApplicationController
     end
   
     post '/scripts' do
-      script = Script.new(params[:scripts])
+      redirect_if_not_signed_in
+      script = current_user.scripts.build(params[:scripts])
       if script.save
         redirect '/scripts'
       else
