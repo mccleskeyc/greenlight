@@ -1,6 +1,6 @@
 
 <div class="container">
-<h1 class="teal-text"> <%= @scripts.title %> </h1>
+<h1> <%= @scripts.title %> </h1>
     <b> Writer(s): </b>
         <br>
     <%= @scripts.writer %>
@@ -21,8 +21,8 @@
     <br><br>
 
 <form action="/scripts/<%= @scripts.id %>" method="post">
-  <a href="/scripts/<%= @scripts.id %>/edit" class="btn-small teal">Edit Coverage</a>  
+  <a href="/scripts/<%= @scripts.id %>/edit" class="btn-small light-blue darken-4">Edit Coverage</a>  
   <input type="hidden" name="_method" value="delete">
-  <input type="submit" value="Delete Coverage" class="btn-small teal">
+  <input type="submit" value="Delete Coverage" class="btn-small light-blue darken-4">
 </form>
 </div>
