@@ -1,14 +1,14 @@
-## About Green Green Light
-Welcome to Green Green Light! This application was built using Sinatra and ActiveRecord to help tv and film development teams, contest administrators and judges, and freelance script analysts like myself organize their coverage. Currently,Green Lightht can track the following for any entry:
+## About Green Light
+Welcome to Green Light! This application was built using Sinatra and ActiveRecord to help tv and film development teams, contest administrators and judges, and freelance script analysts like myself organize their coverage. Currently,Green Light can track the following for any entry:
 - Title
 - Date Read
 - Recommendation
 - Notes
 
-## Running Green Green Light
-To use Green Green Light, do the following:
+## Running Green Light
+To use Green Light, do the following:
 - Clone this repository
-- `cd` into the directory (`greenlight`)
+- `cd` into the directory (`script-tracker-app`)
 - Run `bundle install`
 - Run `shotgun`
 - Enter the local url provided by `shotgun` (likely `localhost:9393`) into your browser
@@ -16,7 +16,7 @@ To use Green Green Light, do the following:
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/mccleskeyc/greenlight
+Bug reports and pull requests are welcome on GitHub at https://github.com/mccleskeyc/script-tracker-app
 
 ## License
 This gem is available under the terms of the MIT License at https://opensource.org/licenses/MIT.
