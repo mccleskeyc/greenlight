@@ -1,12 +1,12 @@
-## About Green Lightt
-Welcome to Green Lightt! This application was built using Sinatra and ActiveRecord to help tv and film development teams, contest administrators and judges, and freelance script analysts like myself organize their coverage. Currently,Green Lightht can track the following for any entry:
+## About Green Green Light
+Welcome to Green Green Light! This application was built using Sinatra and ActiveRecord to help tv and film development teams, contest administrators and judges, and freelance script analysts like myself organize their coverage. Currently,Green Lightht can track the following for any entry:
 - Title
 - Date Read
 - Recommendation
 - Notes
 
-## Running Green Lightt
-To use Green Lightt, do the following:
+## Running Green Green Light
+To use Green Green Light, do the following:
 - Clone this repository
 - `cd` into the directory (`greenlight`)
 - Run `bundle install`
