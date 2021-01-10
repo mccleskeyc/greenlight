@@ -6,13 +6,15 @@ class SessionsController < ApplicationController
     end
 
     post '/signup' do
-        user = User.new(params[:user])
-        if user.save
-          session[:user_id] = user.id
-          redirect "scripts"
-        else
-          redirect "/signup"
-        end
+      
+       user = User.new(params[:user])
+       if user.save
+        redirect '/scripts'
+        session[:user_id] = user.id
+       else
+        redirect 'signup'
+       end
+       binding.pry
       end
 
       get '/login' do

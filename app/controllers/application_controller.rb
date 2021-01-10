@@ -13,6 +13,7 @@ class ApplicationController < Sinatra::Base
   get "/" do
     erb :welcome
   end
+  
   helpers do
     def is_logged_in?
       !!session[:user_id]
@@ -27,9 +28,8 @@ class ApplicationController < Sinatra::Base
     end
 
     def redirect_if_not_signed_in
-      redirect "/login" unless is_logged_in?
+      redirect "/scripts" unless is_logged_in?
     end
-    
   end
 
 end
