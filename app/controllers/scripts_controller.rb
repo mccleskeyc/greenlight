@@ -1,7 +1,11 @@
 class ScriptsController < ApplicationController
   get '/scripts' do
     redirect_if_not_signed_in
+    if params[:filter]
+      @scripts = current_user.scripts.by_writer(params[:filter])
+    else
     @scripts = current_user.scripts
+    end
     @script = Script.find_by_id(session[:script_id])
     erb :'scripts/index'
   end

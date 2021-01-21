@@ -1,6 +1,19 @@
 
 <div class="container">
     <h1    style= "text-align: center;"> Completed Coverage </h1>
+
+    <form action="/scripts" method="get">
+        <div class="input-field col s12">
+        <select name="filter">
+        <option value="" disabled selected>Filter by Writer</option>
+        <% Script.all_writers.each do |writer| %>
+        <option value="<%= writer %>"><%= writer %></option>
+        <% end %>
+        </select>
+        </div>
+        <input type="submit" value="Filter" class="btn green darken-4">
+    </form>
+
         <table class="responsive-table">
             <tr>
                 <th> Title </th>
@@ -21,3 +34,9 @@
             <% end %>
         </table>
     </div>
+
+    <script>
+        $(document).ready(function(){
+            $('select').formSelect();
+        });
+    </script>
